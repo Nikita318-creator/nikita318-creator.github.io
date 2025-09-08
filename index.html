@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    // Universal Link уже проверяет наличие приложения
-    // если приложение не откроется, редиректим на App Store через JS
-    setTimeout(function() {
-      window.location = "https://apps.apple.com/app/id6748720543";
-    }, 5000); // короткая задержка, чтобы дать приложению шанс открыться
+    window.onload = function() {
+      var now = Date.now();
+      // пробуем открыть схему
+      window.location = "AIgfChat://";
+      
+      // если приложение не установлено, Safari останется здесь
+      // через 1500 мс проверяем — если всё ещё здесь, редиректим в App Store
+      setTimeout(function() {
+        if (Date.now() - now < 2000) {
+          window.location = "https://apps.apple.com/app/id6748720543";
+        }
+      }, 1500);
+    };
   </script>
 </head>
 <body>
