@@ -1,37 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Chat App</title>
-    <script>
-        // Function to redirect
-        function redirectToAppStore() {
-            var appStoreLink = 'https://apps.apple.com/app/id6748720543';
-            window.location.replace(appStoreLink);
-        }
-
-        // Trigger Universal Link and check for redirection
-        window.onload = function() {
-            // Start a timer that triggers if the app doesn't open (e.g., if it's not installed)
-            var timeout = setTimeout(function() {
-                redirectToAppStore();
-            }, 2500); // 2.5 seconds
-
-            // Open the Universal Link. If the app is installed, it will intercept this URL.
-            // If not, the browser will continue to load the current page.
-            window.location.href = window.location.href;
-
-            // This code checks if control has been passed to the app.
-            // If the app opens, this listener will detect the page's visibility change and clear the timer.
-            document.addEventListener('visibilitychange', function() {
-                if (document.visibilityState === 'hidden') {
-                    clearTimeout(timeout);
-                }
-            });
-        };
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=https://apps.apple.com/app/id6748720543">
+  <title>Redirecting...</title>
 </head>
 <body>
-    <h1>Loading...</h1>
-    <p>If the app does not open automatically, you will be redirected to the App Store.</p>
+  <p>If not redirected, <a href="https://apps.apple.com/app/id6748720543">click here</a>.</p>
 </body>
 </html>
