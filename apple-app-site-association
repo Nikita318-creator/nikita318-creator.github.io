@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "CL672Q3QTU.Nauman.AIGF.chat",
-        "paths": [ "/*" ]
+        "paths": [ "/" ]
       }
     ]
   }
