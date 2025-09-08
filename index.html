@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://apps.apple.com/app/id6748720543">
   <title>Redirecting...</title>
+  <script>
+    // Universal Link уже проверяет наличие приложения
+    // если приложение не откроется, редиректим на App Store через JS
+    setTimeout(function() {
+      window.location = "https://apps.apple.com/app/id6748720543";
+    }, 5000); // короткая задержка, чтобы дать приложению шанс открыться
+  </script>
 </head>
 <body>
   <p>If not redirected, <a href="https://apps.apple.com/app/id6748720543">click here</a>.</p>
